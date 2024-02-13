@@ -1,11 +1,14 @@
-import '../scss/App.scss'
+import "../scss/App.scss";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
     <div>
-      Escribe aquí tu código
+      <Header />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
