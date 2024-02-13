@@ -1,20 +1,22 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function CharacterCard({ character }) {
   return (
-    <div>
-      <img
-        className="character__photo"
-        src={
-          character.image ||
-          "https://via.placeholder.com/210x295/%C8%C8%C8/666666/?text=HarryPotter"
-        }
-        alt={character.name}
-      />
+    <>
+      <li className="character__li">
+        <img
+          className="character__photo"
+          src={
+            character.image ||
+            "https://via.placeholder.com/210x295/%C8%C8%C8/666666/?text=HarryPotter"
+          }
+          alt={character.name}
+        />
 
-      <div>Name: {character.name}</div>
-      <div>Species: {character.species}</div>
-    </div>
+        <p>Name: {character.name}</p>
+        <p>Species: {character.species}</p>
+      </li>
+    </>
   );
 }
 

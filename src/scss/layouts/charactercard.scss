@@ -1,6 +1,10 @@
 .character {
+  &__li {
+    height: 400px;
+    width: 210px;
+  }
   &__photo {
-    height: 210;
-    width: 295px;
+    height: 295px;
+    width: 210px;
   }
 }

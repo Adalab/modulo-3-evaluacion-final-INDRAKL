@@ -1,0 +1,15 @@
+.characters__list {
+  margin-left: 50px;
+
+  display: grid;
+  list-style: none;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .characters__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+}
