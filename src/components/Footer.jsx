@@ -1,5 +1,5 @@
 function App() {
-  return <div>Escribe aquí tu código</div>;
+  return <div className="footer">Footer</div>;
 }
 
 export default App;
