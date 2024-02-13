@@ -1,9 +1,11 @@
 import CharacterCard from "./CharacterCard";
 
-function CharactersList() {
+function CharactersList({ characters }) {
   return (
     <div>
-      <CharacterCard />
+      {characters.map((character, index) => (
+        <CharacterCard key={character.id} character={character} />
+      ))}
     </div>
   );
 }

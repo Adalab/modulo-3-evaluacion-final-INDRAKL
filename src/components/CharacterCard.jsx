@@ -1,9 +1,19 @@
-function CharacterCard() {
+import React from "react";
+
+function CharacterCard({ character }) {
   return (
     <div>
-      <li>Imagen</li>
-      <li>Harry </li>
-      <li>Humano</li>
+      <img
+        className="character__photo"
+        src={
+          character.image ||
+          "https://via.placeholder.com/210x295/%C8%C8%C8/666666/?text=HarryPotter"
+        }
+        alt={character.name}
+      />
+
+      <div>Name: {character.name}</div>
+      <div>Species: {character.species}</div>
     </div>
   );
 }
