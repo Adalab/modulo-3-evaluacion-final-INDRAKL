@@ -25,12 +25,27 @@ function App() {
 
   //3. Funciones de eventos
 
+  // const handleFilterName = (filterValue) => {
+  //   setFilterName(filterValue);
+  //   console.log(filterValue);
+  //   fetch(`https://hp-api.onrender.com/api/characters`)
+  //     .then((response) => response.json())
+  //     .then((data) => {});
+  // };
+
   const handleFilterName = (filterValue) => {
     setFilterName(filterValue);
     console.log(filterValue);
     fetch(`https://hp-api.onrender.com/api/characters`)
       .then((response) => response.json())
-      .then((data) => {});
+      .then((data) => {
+        // Realizar la búsqueda en todos los personajes obtenidos de la API
+        const filteredCharacters = data.filter((character) =>
+          character.name.toLowerCase().includes(filterValue.toLowerCase())
+        );
+        // Actualizar el estado characters con los personajes filtrados
+        setCharacters(filteredCharacters);
+      });
   };
 
   //4. Variables para el html
