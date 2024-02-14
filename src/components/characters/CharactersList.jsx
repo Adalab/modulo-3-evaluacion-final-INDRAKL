@@ -1,20 +1,17 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 import FilterHouse from "../filters/filterhouse";
 import FilterCharacter from "../filters/filtercharacter";
 
 function CharactersList({ characters }) {
   const htmlCharacters = characters.map((character, id) => (
-    <li key={id} className="" key={id}>
-      <img
-        className="character__photo"
-        src={
-          character.image ||
-          "https://via.placeholder.com/210x295/%C8%C8%C8/666666/?text=HarryPotter"
-        }
-        alt={character.name}
+    <li key={id} className="">
+      <CharacterCard
+        character={character}
+        name={character.name}
+        species={character.species}
       />
-      <CharacterCard name={character.name} species={character.species} />
     </li>
   ));
 
