@@ -1,5 +1,5 @@
 function fetchCharacters() {
-  return fetch("https://hp-api.onrender.com/api/characters")
+  return fetch("https://hp-api.onrender.com/api/characters/house/gryffindor")
     .then((response) => response.json())
     .then((responseData) => {
       return responseData.map((eachCharacter) => {
