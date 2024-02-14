@@ -18,7 +18,7 @@ function CharactersList({ characters }) {
     </>
   );
 }
-CharactersList.PropTypes = {
+CharactersList.propTypes = {
   characters: PropTypes.array,
 };
 export default CharactersList;

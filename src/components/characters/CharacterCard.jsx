@@ -22,7 +22,7 @@ function CharacterCard({ character, name, species }) {
   );
 }
 
-CharacterCard.PropTypes = {
+CharacterCard.propTypes = {
   name: PropTypes.string,
   species: PropTypes.string,
 };
