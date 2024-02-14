@@ -15,12 +15,12 @@ function CharacterDetail({ findCharacter }) {
         alt={character.name}
       />
       <div>
-        <h2 className="card__title">{character.name}</h2>
-        <p>Estado de vida: {character.status ? "Vivo" : "Muerto"}</p>{" "}
+        <h2 className="">{character.name}</h2>
+        <p>Esatus: {character.status ? "vivo" : "muerto"}</p>{" "}
         {/* Muestra "Vivo" si el estado es true, "Muerto" si es false */}
-        <p>{character.species}</p>
-        <p>{character.gender}</p>
-        <p>{character.house}</p>
+        <p>Especie: {character.species}</p>
+        <p>Género: {character.gender}</p>
+        <p>Casa: {character.house}</p>
         <Link to="/">Volver</Link>
       </div>
     </div>
