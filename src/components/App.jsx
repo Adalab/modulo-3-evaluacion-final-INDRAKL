@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import fetchCharacters from "../services/fetch";
 import "../scss/App.scss";
 import Header from "./header";
-import CharactersList from "./CharactersList";
+import CharactersList from "./characters/CharactersList";
 import Footer from "./Footer";
 
 function App() {
