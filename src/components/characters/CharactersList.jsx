@@ -1,8 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
-import FilterHouse from "../filters/filterhouse";
-import FilterCharacter from "../filters/filtercharacter";
 
 function CharactersList({ characters }) {
   const htmlCharacters = characters.map((character, id) => (
@@ -17,9 +14,7 @@ function CharactersList({ characters }) {
 
   return (
     <>
-      <FilterCharacter />
-      <FilterHouse />
-      <ul className="characters__list">{htmlCharacters}</ul>;
+      <ul className="characters__list">{htmlCharacters}</ul>
     </>
   );
 }

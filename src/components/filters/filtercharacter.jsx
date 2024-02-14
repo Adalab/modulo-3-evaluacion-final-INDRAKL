@@ -1,8 +1,12 @@
-function FilterCharacter() {
+function FilterCharacter({ handleFilterName }) {
+  const handleChangeName = (event) => {
+    handleFilterName(event.currentTarget.value);
+  };
   return (
     <>
       <form className="filters">
-        Busca por personaje <input className="filter" type="text" />
+        Busca por personaje{" "}
+        <input className="filter" type="text" onInput={handleChangeName} />
       </form>
       <form
         action="/procesar_formulario"
