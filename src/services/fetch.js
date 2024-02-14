@@ -8,6 +8,9 @@ function fetchCharacters() {
           image: eachCharacter.image,
           name: eachCharacter.name,
           species: eachCharacter.species,
+          gender: eachCharacter.gender,
+          house: eachCharacter.house,
+          status: eachCharacter.alive,
         };
       });
     });
