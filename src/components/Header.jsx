@@ -5,7 +5,7 @@ function Header() {
   return (
     <Link to="/">
       <div className="header__photo">
-        <img src={HarryPotter} alt="Harry Potter" href="" />
+        <img src={HarryPotter} alt="Harry Potter" />
       </div>
     </Link>
   );

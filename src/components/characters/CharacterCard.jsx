@@ -14,8 +14,8 @@ function CharacterCard({ character, name, species }) {
           alt={character.name}
         />
         <div>
-          <p>{name}</p>
-          <p>{species}</p>
+          <p className="character__name">{name}</p>
+          <p className="character__species">{species}</p>
         </div>
       </div>
     </Link>
