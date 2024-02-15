@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
+import iconAlive from "../../images/iconalive.png";
+import iconDead from "../../images/icondead.webp";
 
 function CharacterDetail({ findCharacter }) {
   const params = useParams();
@@ -15,7 +17,15 @@ function CharacterDetail({ findCharacter }) {
         alt={character.name}
       />
       <h2>{character.name}</h2>
-      <p>Esatus: {character.status ? "vivo" : "muerto"}</p>{" "}
+      <p>
+        Estado: {character.status ? "vivo" : "muerto"}
+        {character.status ? (
+          <img className="character__icon" src={iconAlive} alt="Alive" />
+        ) : (
+          <img className="character__icon" src={iconDead} alt="Dead" />
+        )}
+      </p>
+
       {/* Muestra "Vivo" si el estado es true, "Muerto" si es false */}
       <p>Especie: {character.species}</p>
       <p>Género: {character.gender}</p>
