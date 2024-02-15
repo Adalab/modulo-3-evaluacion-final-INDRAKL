@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 
-function FilterHouse() {
+function FilterHouse({ handleFilterHouse }) {
+  const handleInputHouse = (event) => {
+    handleFilterHouse("house", event.currentTarget.value);
+  };
   return (
-    <label className="filters" htmlFor="character">
+    <label className="filters" htmlFor="house">
       Selecciona la casa
-      <select className="filter__select">
+      <select className="filter__select" onInput={handleInputHouse}>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Ravenclaw">Ravenclaw</option>
         <option value="Slytherin">Slytherin</option>
@@ -14,7 +17,5 @@ function FilterHouse() {
     </label>
   );
 }
-
-FilterHouse.propTypes = {};
 
 export default FilterHouse;

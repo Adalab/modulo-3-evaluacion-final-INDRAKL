@@ -14,6 +14,7 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
+  const [filterHouse, setFilterHouse] = useState("all");
 
   //2. useEffect
 
@@ -24,14 +25,6 @@ function App() {
   }, []);
 
   //3. Funciones de eventos
-
-  // const handleFilterName = (filterValue) => {
-  //   setFilterName(filterValue);
-  //   console.log(filterValue);
-  //   fetch(`https://hp-api.onrender.com/api/characters`)
-  //     .then((response) => response.json())
-  //     .then((data) => {});
-  // };
 
   const handleFilterName = (filterValue) => {
     setFilterName(filterValue);
@@ -47,14 +40,38 @@ function App() {
       });
   };
 
+  const handleFilterHouse = (filterType, value) => {
+    if (filterType === "house") {
+      setFilterHouse(value);
+      if (value === "all") {
+        fetch(`https://hp-api.onrender.com/api/characters`)
+          .then((response) => response.json())
+          .then((data) => {
+            setCharacters(data);
+          });
+      } else {
+        // Si se selecciona una casa específica, recuperar los personajes de esa casa
+        fetch(`https://hp-api.onrender.com/api/characters/house/${value}`)
+          .then((response) => response.json())
+          .then((data) => {
+            setCharacters(data);
+          });
+      }
+    }
+  };
+
   //4. Variables para el html
 
   const findCharacter = (id) => {
     return characters.find((character) => character.id === id) || {};
   };
 
-  const filteredCharacterbyName = characters.filter((character) =>
-    character.name.toLowerCase().includes(filterName.toLowerCase())
+  const filteredCharactersByHouse = characters.filter((character) => {
+    return filterHouse === "all" || character.house === filterHouse;
+  });
+  const filteredCharactersByName = filteredCharactersByHouse.filter(
+    (character) =>
+      character.name.toLowerCase().includes(filterName.toLowerCase())
   );
 
   return (
@@ -65,8 +82,11 @@ function App() {
           path="/"
           element={
             <div>
-              <Filters handleFilterName={handleFilterName} />
-              <CharactersList characters={filteredCharacterbyName} />
+              <Filters
+                handleFilterName={handleFilterName}
+                handleFilterHouse={handleFilterHouse}
+              />
+              <CharactersList characters={filteredCharactersByName} />
             </div>
           }
         />

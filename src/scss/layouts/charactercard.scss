@@ -1,9 +1,6 @@
 .character {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #83202f;
-  height: 355px;
-  width: 210px;
 
   &__photo {
     height: 295px;
@@ -12,6 +9,9 @@
   &__link {
     text-decoration: none;
     color: #d1bc8a;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   &__name {
     margin-top: 5px;
