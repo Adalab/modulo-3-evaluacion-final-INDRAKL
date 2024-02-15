@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import fetchCharacters from "../services/fetch";
 import { Route, Routes } from "react-router-dom";
 import "../scss/App.scss";
+import fetchCharacters from "../services/fetch";
 import PropTypes from "prop-types";
 import Header from "./header";
 import Filters from "./filters/filters";

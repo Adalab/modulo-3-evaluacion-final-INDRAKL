@@ -6,7 +6,7 @@ function FilterCharacter({ handleFilterName }) {
     <>
       <form className="filters">
         Busca por personaje{" "}
-        <input className="filter" type="text" onInput={handleChangeName} />
+        <input className="filter" type="text" onChange={handleChangeName} />
       </form>
       <form
         action="/procesar_formulario"

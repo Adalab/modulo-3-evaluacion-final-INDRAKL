@@ -1,7 +1,15 @@
 .character {
   &__details {
     text-align: center;
-    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  &__return {
+    display: flex;
+    text-decoration: none;
+    color: $beige;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   &__icon {
     width: 20px;
