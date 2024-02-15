@@ -3,7 +3,7 @@ import CharacterCard from "./CharacterCard";
 
 function CharactersList({ characters }) {
   const htmlCharacters = characters.map((character, id) => (
-    <li key={id} className="">
+    <li key={id} className="character">
       <CharacterCard
         character={character}
         name={character.name}

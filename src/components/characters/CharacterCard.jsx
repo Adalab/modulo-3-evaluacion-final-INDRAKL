@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function CharacterCard({ character, name, species }) {
   return (
-    <Link to={"/character/" + character.id}>
+    <Link to={"/character/" + character.id} className="character__link">
       <div>
         <img
           className="character__photo"
@@ -14,7 +14,7 @@ function CharacterCard({ character, name, species }) {
           alt={character.name}
         />
         <div>
-          <p className="character__name">{name}</p>
+          <h4 className="character__name">{name}</h4>
           <p className="character__species">{species}</p>
         </div>
       </div>

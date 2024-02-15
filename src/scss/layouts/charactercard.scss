@@ -1,10 +1,19 @@
 .character {
-  &__li {
-    height: 400px;
-    width: 210px;
-  }
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #83202f;
+  height: 355px;
+  width: 210px;
+
   &__photo {
     height: 295px;
     width: 210px;
+  }
+  &__link {
+    text-decoration: none;
+    color: #d1bc8a;
+  }
+  &__name {
+    margin-top: 5px;
   }
 }
