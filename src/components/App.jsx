@@ -22,7 +22,6 @@ function App() {
     fetchCharacters().then((data) => {
       setCharacters(data);
     });
-    console.log(fetchCharacters);
   }, []);
 
   //3. Funciones de eventos
@@ -56,6 +55,7 @@ function App() {
   const filteredCharactersByHouse = characters.filter((character) => {
     return filterHouse === "all" || character.house === filterHouse;
   });
+
   const filteredCharactersByName = filteredCharactersByHouse.filter(
     (character) =>
       character.name.toLowerCase().includes(filterName.toLowerCase())
