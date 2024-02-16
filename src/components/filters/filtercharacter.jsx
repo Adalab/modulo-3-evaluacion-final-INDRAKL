@@ -1,18 +1,16 @@
+import { useState } from "react";
+
 function FilterCharacter({ handleFilterName }) {
   const handleChangeName = (event) => {
     handleFilterName(event.currentTarget.value);
   };
+
   return (
     <>
       <form className="filters">
-        Busca por personaje{" "}
-        <input className="filter" type="text" onChange={handleChangeName} />
+        <label htmlFor="name">Busca por personaje:</label>
+        <input className="" type="text" onChange={handleChangeName} />
       </form>
-      <form
-        action="/procesar_formulario"
-        method="post"
-        className="filters__characters"
-      ></form>
     </>
   );
 }

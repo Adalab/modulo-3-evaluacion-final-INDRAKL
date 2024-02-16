@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import fetchCharacters from "../services/fetch";
 import { Route, Routes } from "react-router-dom";
 import "../scss/App.scss";
-import fetchCharacters from "../services/fetch";
 import PropTypes from "prop-types";
 import Header from "./header";
 import Filters from "./filters/filters";
@@ -14,7 +14,7 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
-  const [filterHouse, setFilterHouse] = useState("all");
+  const [filterHouse, setFilterHouse] = useState("Gryffindor");
 
   //2. useEffect
 
@@ -22,41 +22,28 @@ function App() {
     fetchCharacters().then((data) => {
       setCharacters(data);
     });
+    console.log(fetchCharacters);
   }, []);
 
   //3. Funciones de eventos
 
   const handleFilterName = (filterValue) => {
     setFilterName(filterValue);
-    fetch(`https://hp-api.onrender.com/api/characters`)
-      .then((response) => response.json())
-      .then((data) => {
-        // Realizar la búsqueda en todos los personajes obtenidos de la API
-        const filteredCharacters = data.filter((character) =>
-          character.name.toLowerCase().includes(filterValue.toLowerCase())
-        );
-        // Actualizar el estado characters con los personajes filtrados
-        setCharacters(filteredCharacters);
-      });
+    const filteredCharacters = characters.filter((character) =>
+      character.name.toLowerCase().includes(filterValue.toLowerCase())
+    );
+    setCharacters(filteredCharacters);
   };
 
   const handleFilterHouse = (filterType, value) => {
     if (filterType === "house") {
       setFilterHouse(value);
-      if (value === "all") {
-        fetch(`https://hp-api.onrender.com/api/characters`)
-          .then((response) => response.json())
-          .then((data) => {
-            setCharacters(data);
-          });
-      } else {
-        // Si se selecciona una casa específica, recuperar los personajes de esa casa
-        fetch(`https://hp-api.onrender.com/api/characters/house/${value}`)
-          .then((response) => response.json())
-          .then((data) => {
-            setCharacters(data);
-          });
-      }
+    } else {
+      fetch(`https://hp-api.onrender.com/api/characters/house/${value}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setCharacters(data);
+        });
     }
   };
 
