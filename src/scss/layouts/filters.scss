@@ -1,10 +1,10 @@
 .filters {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   align-items: center;
   justify-content: center;
   &__text {
-    font-size: 12px;
+    font-size: 15px;
+    color: $granate;
   }
 }

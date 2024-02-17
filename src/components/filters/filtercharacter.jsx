@@ -15,7 +15,9 @@ function FilterCharacter({
   return (
     <>
       <form className="filters">
-        <label htmlFor="name">Busca por personaje:</label>
+        <label htmlFor="name">
+          <h1 className="filters__text">Busca por personaje: </h1>
+        </label>
         <input
           className=""
           id="name"
