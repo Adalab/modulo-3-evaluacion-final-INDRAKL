@@ -1,12 +1,24 @@
 import FilterHouse from "./filterhouse";
 import FilterCharacter from "./filtercharacter";
-import FilterGender from "./filter.gender";
 
-function Filters({ handleFilterName, handleFilterHouse }) {
+function Filters({
+  handleFilterName,
+  handleFilterHouse,
+  filteredCharactersByName,
+  filterName,
+  filterHouse,
+}) {
   return (
     <>
-      <FilterCharacter handleFilterName={handleFilterName} />
-      <FilterHouse handleFilterHouse={handleFilterHouse} />
+      <FilterCharacter
+        handleFilterName={handleFilterName}
+        filteredCharactersByName={filteredCharactersByName}
+        filterName={filterName}
+      />
+      <FilterHouse
+        handleFilterHouse={handleFilterHouse}
+        filterHouse={filterHouse}
+      />
     </>
   );
 }
