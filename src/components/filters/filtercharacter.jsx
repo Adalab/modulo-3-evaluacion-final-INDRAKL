@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function FilterCharacter({ handleFilterName }) {
   const handleChangeName = (event) => {
     handleFilterName(event.currentTarget.value);
