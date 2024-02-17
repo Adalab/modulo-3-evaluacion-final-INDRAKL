@@ -15,12 +15,14 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
+  const [originalCharacters, setOriginalCharacters] = useState([]);
 
   //2. useEffect
 
   useEffect(() => {
     fetchCharacters().then((data) => {
       setCharacters(data);
+      setOriginalCharacters(data);
     });
   }, []);
 
@@ -28,7 +30,7 @@ function App() {
 
   const handleFilterName = (filterValue) => {
     setFilterName(filterValue);
-    const filteredCharacters = characters.filter((character) =>
+    const filteredCharacters = originalCharacters.filter((character) =>
       character.name.toLowerCase().includes(filterValue.toLowerCase())
     );
     setCharacters(filteredCharacters);
