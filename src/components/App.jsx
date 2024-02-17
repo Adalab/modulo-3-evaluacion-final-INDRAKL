@@ -15,6 +15,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
   const [filterHouse, setFilterHouse] = useState("Gryffindor");
+  const [filterGender, setFilterGender] = useState("all");
 
   //2. useEffect
 
@@ -22,7 +23,6 @@ function App() {
     fetchCharacters().then((data) => {
       setCharacters(data);
     });
-    console.log(fetchCharacters);
   }, []);
 
   //3. Funciones de eventos
@@ -47,6 +47,10 @@ function App() {
     }
   };
 
+  const handleChangeFilterGender = (gender) => {
+    setFilterGender(gender);
+  };
+
   //4. Variables para el html
 
   const findCharacter = (id) => {
@@ -61,8 +65,12 @@ function App() {
       character.name.toLowerCase().includes(filterName.toLowerCase())
   );
 
+  const filteredCharactersGender = characters.filter(
+    (character) => filterGender === "all" || character.gender === filterGender
+  );
+
   return (
-    <div>
+    <div className="homepage">
       <Header />
       <Routes>
         <Route
