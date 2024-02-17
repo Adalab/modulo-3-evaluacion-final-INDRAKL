@@ -6,7 +6,7 @@ function FilterHouse({ handleFilterHouse, filterHouse }) {
   };
   return (
     <label className="filters" htmlFor="house">
-      Selecciona la casa
+      <h1 className="filters__text">Selecciona la casa:</h1>
       <select
         className="filter__select"
         value={filterHouse}

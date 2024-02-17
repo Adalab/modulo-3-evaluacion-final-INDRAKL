@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import iconAlive from "../../images/iconalive.png";
 import iconDead from "../../images/icondead.webp";
+import lechuza from "../../images/lechuza.jpeg";
 
 function CharacterDetail({ findCharacter }) {
   const params = useParams();
@@ -9,29 +10,28 @@ function CharacterDetail({ findCharacter }) {
   return (
     <div className="character__details">
       <Link to="/" className="character__return">
-        ←Volver
+        VOLVER
       </Link>
-      <div>
+      <div className="character__card">
         <img
           className="character__photo"
-          src={
-            character.image ||
-            "https://via.placeholder.com/210x295/%C8%C8%C8/666666/?text=HarryPotter"
-          }
+          src={character.image || lechuza}
           alt={character.name}
         />
-        <h2>{character.name}</h2>
-        <p>
-          Estado: {character.status ? "vivo" : "muerto"}
-          {character.status ? (
-            <img className="character__icon" src={iconAlive} alt="Alive" />
-          ) : (
-            <img className="character__icon" src={iconDead} alt="Dead" />
-          )}
-        </p>
-        <p>Especie: {character.species}</p>
-        <p>Género: {character.gender}</p>
-        <p>Casa: {character.house}</p>
+        <div className="character__text">
+          <h2 className="character__text__name">{character.name}</h2>
+          <p>
+            Estado: {character.status ? "vivo" : "muerto"}
+            {character.status ? (
+              <img className="character__icon" src={iconAlive} alt="Alive" />
+            ) : (
+              <img className="character__icon" src={iconDead} alt="Dead" />
+            )}
+          </p>
+          <p>Especie: {character.species}</p>
+          <p>Género: {character.gender}</p>
+          <p>Casa: {character.house}</p>
+        </div>
       </div>
     </div>
   );

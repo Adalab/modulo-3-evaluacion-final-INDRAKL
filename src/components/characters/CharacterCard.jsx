@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import lechuza from "../../images/lechuza.jpeg";
 
 function CharacterCard({ character, name, species }) {
   return (
     <Link to={"/character/" + character.id} className="character__link">
       <img
         className="character__photo"
-        src={
-          character.image ||
-          "https://via.placeholder.com/210x295/%C8%C8%C8/666666/?text=HarryPotter"
-        }
+        src={character.image || lechuza}
         alt={character.name}
       />
       <h4 className="character__name">{name}</h4>
