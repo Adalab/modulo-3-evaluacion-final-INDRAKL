@@ -5,14 +5,20 @@ function Filters({
   handleFilterName,
   handleFilterHouse,
   filteredCharactersByName,
+  filterName,
+  filterHouse,
 }) {
   return (
     <>
       <FilterCharacter
         handleFilterName={handleFilterName}
         filteredCharactersByName={filteredCharactersByName}
+        filterName={filterName}
       />
-      <FilterHouse handleFilterHouse={handleFilterHouse} />
+      <FilterHouse
+        handleFilterHouse={handleFilterHouse}
+        filterHouse={filterHouse}
+      />
     </>
   );
 }

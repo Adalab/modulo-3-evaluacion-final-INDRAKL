@@ -72,6 +72,8 @@ function App() {
                 handleFilterName={handleFilterName}
                 handleFilterHouse={handleFilterHouse}
                 filteredCharactersByName={filteredCharactersByName}
+                filterName={filterName}
+                filterHouse={filterHouse}
               />
               <CharactersList characters={filteredCharactersByName} />
             </div>
