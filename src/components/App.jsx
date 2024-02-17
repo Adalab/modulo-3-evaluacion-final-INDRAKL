@@ -23,7 +23,6 @@ function App() {
     fetchCharacters().then((data) => {
       setCharacters(data);
     });
-    console.log(fetchCharacters);
   }, []);
 
   //3. Funciones de eventos
@@ -81,8 +80,6 @@ function App() {
               <Filters
                 handleFilterName={handleFilterName}
                 handleFilterHouse={handleFilterHouse}
-                handleChangeFilterGender={handleChangeFilterGender}
-                filteredCharactersGender={filteredCharactersGender}
               />
               <CharactersList characters={filteredCharactersByName} />
             </div>
