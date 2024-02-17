@@ -55,7 +55,6 @@ function App() {
   const filteredCharactersByHouse = characters.filter((character) => {
     return filterHouse === "all" || character.house === filterHouse;
   });
-
   const filteredCharactersByName = filteredCharactersByHouse.filter(
     (character) =>
       character.name.toLowerCase().includes(filterName.toLowerCase())
@@ -72,6 +71,7 @@ function App() {
               <Filters
                 handleFilterName={handleFilterName}
                 handleFilterHouse={handleFilterHouse}
+                filteredCharactersByName={filteredCharactersByName}
               />
               <CharactersList characters={filteredCharactersByName} />
             </div>
