@@ -23,6 +23,7 @@ function FilterCharacter({
           id="name"
           name="name"
           type="text"
+          placeholder="Ej: Malfoy"
           onChange={handleInput}
           value={filterName}
         />
