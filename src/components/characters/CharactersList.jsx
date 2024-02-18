@@ -2,14 +2,19 @@ import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 
 function CharactersList({ characters }) {
-  if (characters.length === 0) {
+  const sortedCharacters = characters.sort((a, b) => {
+    return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+  });
+
+  if (sortedCharacters.length === 0) {
     return (
       <p className="characters__list__text">
         Ningún personaje coincide con tu búsqueda. Por favor, prueba de nuevo.
       </p>
     );
   }
-  const htmlCharacters = characters.map((character, id) => (
+
+  const htmlCharacters = sortedCharacters.map((character, id) => (
     <li key={id} className="character">
       <CharacterCard
         character={character}
@@ -25,7 +30,9 @@ function CharactersList({ characters }) {
     </>
   );
 }
+
 CharactersList.propTypes = {
   characters: PropTypes.array,
 };
+
 export default CharactersList;

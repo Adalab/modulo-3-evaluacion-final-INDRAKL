@@ -7,9 +7,17 @@ function FilterCharacter({
 }) {
   const [inputValue, setInputValue] = useState(filteredCharactersByName);
   const handleInput = (event) => {
+    event.preventDefault();
     const newValue = event.currentTarget.value;
     setInputValue(newValue);
     handleFilterName(newValue);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleFilterName(filterName);
+    }
   };
 
   return (
@@ -26,6 +34,7 @@ function FilterCharacter({
           placeholder="Ej: Malfoy"
           onChange={handleInput}
           value={filterName}
+          onKeyPress={handleKeyPress}
         />
       </form>
     </>
