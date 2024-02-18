@@ -18,7 +18,7 @@ function CharacterDetail({ findCharacter }) {
           src={character.image || lechuza}
           alt={character.name}
         />
-        <div className="character__text">
+        <form className="character__text">
           <h2 className="character__text__name">{character.name}</h2>
           <p>
             Estado: {character.status ? "vivo" : "muerto"}
@@ -31,7 +31,15 @@ function CharacterDetail({ findCharacter }) {
           <p>Especie: {character.species}</p>
           <p>Género: {character.gender}</p>
           <p>Casa: {character.house}</p>
-        </div>
+          <p>
+            {character.alternate_names &&
+              character.alternate_names.length > 0 && (
+                <span>
+                  Nombres alternativos: {character.alternate_names.join(", ")}
+                </span>
+              )}
+          </p>
+        </form>
       </div>
     </div>
   );

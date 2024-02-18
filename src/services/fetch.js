@@ -11,6 +11,7 @@ function fetchCharacters() {
           gender: eachCharacter.gender,
           house: eachCharacter.house,
           status: eachCharacter.alive,
+          alternate_names: eachCharacter.alternate_names,
         };
       });
     });
