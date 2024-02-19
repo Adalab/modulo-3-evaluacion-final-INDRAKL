@@ -1,6 +1,4 @@
-<div style="text-align:center;">
-    ![Harry Potter](src/images/harrypotter.png)
-</div>
+![Harry Potter](src/images/harrypotter.png)
 
 # LOS PERSONAJES DE HARRY POTTER
 
