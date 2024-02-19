@@ -3,15 +3,29 @@
   margin: 10px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: $gris;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
+
+  &__text {
+    font-size: 15px;
+    color: $granate;
+    font-weight: bold;
+    margin-right: 10px;
+  }
 }
 
-.filters__text {
-  font-size: 15px;
-  color: $granate;
-  font-weight: bold;
-  margin-right: 10px;
+.button__filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+  &__reset {
+    border-radius: 10px;
+    padding: 10px 10px;
+  }
 }

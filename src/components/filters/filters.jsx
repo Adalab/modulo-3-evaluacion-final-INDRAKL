@@ -21,9 +21,11 @@ function Filters({
         handleFilterHouse={handleFilterHouse}
         filterHouse={filterHouse}
       />
-      <button className="filters" onClick={handleReset}>
-        Reset{" "}
-      </button>
+      <div className="button__filter">
+        <button className="button__filter__reset" onClick={handleReset}>
+          Clear search{" "}
+        </button>
+      </div>
     </>
   );
 }
