@@ -1,4 +1,6 @@
-![Harry Potter](src/images/harrypotter.png)
+<div style="text-align:center;">
+    ![Harry Potter](src/images/harrypotter.png)
+</div>
 
 # LOS PERSONAJES DE HARRY POTTER
 
@@ -8,12 +10,12 @@ A través de la siguiente aplicación podrás adentrarte en el universo de Harry
 
 - Al cargar la página podrás ver todos los personajes disponibles (ordenados alfabéticamente) de Gryffindor, la casa seleccionada por defecto.
 - A través del filtro select podrás hacer que aparezcan los personajes de todas las casas o los de cada una de ellas.
-- Además, se inclute un filtro por nombre, que te mostrará los personajes que contengan tu búsqueda (texto introducido y casa seleccionada).
-- Si quieres volver al estado incial, solo tienes que activar el botón de limpiar búsqueda.
+- Además, se incluye un filtro por nombre, que te mostrará los personajes que contengan tu búsqueda (texto introducido y casa seleccionada).
+- Si quieres volver al estado incial solo tienes que activar el botón de limpiar búsqueda.
 - Por último, si pinchas la tarjeta de cada personaje podrás ver detalles como si está vivo o muerto, sus nombres alternativos (si los tiene), etc.
 - Aquí tienes una vista global de la web:
 
-![captura global web](../../Proyectos/modulo-3-evaluacion-final-INDRAKL/src/images/Captura%20de%20pantalla%202024-02-19%20a%20las%2018.20.00.png)
+![captura global web](src/images/capturaglobal.png)
 
 ## TECNOLOGÍAS UTILIZADAS
 
