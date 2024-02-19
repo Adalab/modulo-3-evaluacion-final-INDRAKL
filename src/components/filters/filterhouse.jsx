@@ -22,4 +22,9 @@ function FilterHouse({ handleFilterHouse, filterHouse }) {
   );
 }
 
+FilterHouse.propTypes = {
+  handleFilterHouse: PropTypes.func,
+  filterHouse: PropTypes.string,
+};
+
 export default FilterHouse;

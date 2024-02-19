@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function FilterCharacter({
   handleFilterName,
@@ -40,5 +41,11 @@ function FilterCharacter({
     </>
   );
 }
+
+FilterCharacter.propTypes = {
+  handleFilterName: PropTypes.func,
+  filteredCharactersByName: PropTypes.array,
+  filterName: PropTypes.string,
+};
 
 export default FilterCharacter;

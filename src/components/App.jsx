@@ -48,6 +48,15 @@ function App() {
     }
   };
 
+  const handleReset = () => {
+    setFilterName("");
+    setFilterHouse("Gryffindor");
+    const filteredCharacters = originalCharacters.filter(
+      (character) => character.house === "Gryffindor"
+    );
+    setCharacters(filteredCharacters);
+  };
+
   //4. Variables para el html
 
   const findCharacter = (id) => {
@@ -76,6 +85,7 @@ function App() {
                 filteredCharactersByName={filteredCharactersByName}
                 filterName={filterName}
                 filterHouse={filterHouse}
+                handleReset={handleReset}
               />
               <CharactersList characters={filteredCharactersByName} />
             </div>

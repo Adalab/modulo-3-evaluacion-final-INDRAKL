@@ -17,7 +17,7 @@ function CharacterCard({ character, name, species }) {
 }
 
 CharacterCard.propTypes = {
-  characters: PropTypes.array,
+  character: PropTypes.object,
   name: PropTypes.string,
   species: PropTypes.string,
 };

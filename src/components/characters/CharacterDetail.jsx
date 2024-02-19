@@ -45,4 +45,8 @@ function CharacterDetail({ findCharacter }) {
   );
 }
 
+CharacterDetail.propTypes = {
+  findCharacter: PropTypes.func,
+};
+
 export default CharacterDetail;
