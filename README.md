@@ -1,4 +1,4 @@
-![captura global web](../../Proyectos/modulo-3-evaluacion-final-INDRAKL/src/images/harrypotter.png)
+![Harry Potter](src/images/harrypotter.png)
 
 # LOS PERSONAJES DE HARRY POTTER
 
