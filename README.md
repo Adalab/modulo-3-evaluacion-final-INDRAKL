@@ -8,6 +8,7 @@ A través de la siguiente aplicación podrás adentrarte en el universo de Harry
 - A través del filtro select podrás hacer que aparezcan los personajes de todas las casas o los de cada una de ellas.
 - Además, se inclute un filtro por nombre, que te mostrará los personajes que contengan tu búsqueda (texto introducido y casa seleccionada).
 - Si quieres volver al estado incial, solo tienes que activar el botón de limpiar búsqueda.
+- Por último, si pinchas la tarjeta de cada personaje podrás ver detalles como si está vivo o muerto, sus nombres alternativos (si los tiene), etc.
 
 ## Tecnologías Utilizadas
 
