@@ -23,7 +23,7 @@ function Filters({
       />
       <div className="button__filter">
         <button className="button__filter__reset" onClick={handleReset}>
-          Clear search{" "}
+          Limpia tu búsqueda{" "}
         </button>
       </div>
     </>
